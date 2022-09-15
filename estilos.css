@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+	min-height: 100%; 
+	 
+}
+
+.grid_container{
+	display: grid;
+	gap: 5px;
+	grid-template: 
+	"header" 70px
+	"navbar" 90px
+	"main"	auto
+	"footer" 100px
+	;
+}
+
+.header{
+	grid-area: header;
+	background-color: hotpink;
+}
+
+
+.navbar{
+	grid-area: navbar;
+	background-color: orange;
+}
+
+.main{
+	grid-area: main;
+	background-color: yellow;
+}
+
+
+.footer{
+	grid-area: footer;
+	background-color: lightgreen;
+}
+
+@media (min-width: 600px) {
+
+	.grid_container{
+
+		grid-template: 
+		"header 	header" 	70px 
+		"navbar 	navbar" 	90px
+		"main       main " 	    auto
+		"footer 	footer" 	100px /
+		 200px 		auto;
+ 	}
+
+}
+
+
+@media (min-width: 900px) {
+	.grid_container{
+		grid-template: 
+		"header 	navbar  navbar" 	70px 
+		"main       main    main" 	    auto
+		"footer 	footer 	footer" 	65px /
+		 400px 		auto 	200px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.grid_container{
+		grid-template: 
+		"header 	navbar  navbar" 	70px 
+		"main       main    main" 	    auto
+		"footer 	footer 	footer" 	65px /
+		 400px 		auto 	200px;
+
+	}
+}
+
